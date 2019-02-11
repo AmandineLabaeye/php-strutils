@@ -6,9 +6,9 @@
  * Time: 15:39
  */
 
-require "classes/StrUtils.php";
+require "classes/StrUtilsCorrection.php";
 
-$utils = new StrUtils("Salut à tous");
+$utils = new StrUtilsCorrection("Salut à tous");
 
 Echo "Bold : ".$utils->bold();
 

@@ -38,7 +38,14 @@ class StrUtils
 
     public function uglify()
     {
-        return "<strong><i><u>".mb_strtoupper($this->str)."</u></i></strong>";
+        $b = self::bold();
+        $i = self::italic();
+        $u = self::underline();
+        $c = self::capitalize();
+        $ret = str_replace($this->str, $b, $i);
+        $ret1 = str_replace($this->str, $u, $ret);
+        $ret2 = str_replace($this->str, $c, $ret1);
+        return $ret2;
     }
 
 }
